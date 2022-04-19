@@ -66,3 +66,116 @@ blockquote {
 	- https://www.smashingmagazine.com/2017/04/start-using-css-custom-properties/
 */
 
+
+.blog{
+	display: grid;
+	grid-template-columns: 1fr 4fr 2fr;
+	column-gap: 40px;
+}
+
+header,
+h1,
+h2,
+h3,
+p, 
+footer{
+	grid-column: 2;
+}
+
+figure,
+blockquote{
+	grid-column: 1 / -1;
+}
+
+
+.tip-vlevo{
+	grid-column: 1;
+}
+
+.tip-vpravo{
+	grid-column: 3;
+}
+
+h1,
+h2{
+	color: var(--zelena);
+}
+
+h1{
+	font-size: 72px;
+}
+
+h2{
+	font-size: 54px;
+}
+
+blockquote{
+	text-align: center;
+	font-size: 32px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+
+figcaption,
+blockquote,
+footer p,
+footer a,
+header p{
+	color: var(--seda);
+}
+
+.tip img{
+	max-width: 150px;
+	padding-top: 15px;
+	display: block;
+	margin: auto;
+}
+
+figure{
+	margin-left: 0;
+	margin-right: 0;
+}
+
+figure img {
+	object-fit: cover;
+	width: 100%;
+  }
+
+.tip-vlevo{
+	text-align: right;
+	padding: 0 15px;
+	border-right: 2px solid var(--zluta);
+}
+
+.tip-vpravo{
+	text-align: left;
+	padding: 0 15px;
+	border-left: 2px solid var(--zluta);
+}
+
+.tip{
+	background-color: var(--svetla);
+	color: var(--tmava);
+	margin-top: 18px;
+	margin-bottom: auto;
+}
+
+.tip a,
+.tip a:hover,
+.tip a:active,
+.tip a:focus{
+	color: var(--oranzova);
+}
+
+
+blockquote::before,
+blockquote::after{
+	content: "";
+	display: block;
+	background-color: var(--limetka);
+	width: 100px;
+	height: 2px;
+	align-content: center;
+	margin: 15px auto;
+}
